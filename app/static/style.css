@@ -40,8 +40,8 @@ body {
 }
 
 button.choose-file-button {
-    width: 200px;
-    height: 40px;
+    width: 400px;
+    height: 80px;
     border-radius: 2px;
     background-color: #ffffff;
     border: solid 1px #edb321;
@@ -50,15 +50,19 @@ button.choose-file-button {
 }
 
 button.analyze-button {
-    width: 200px;
-    height: 40px;
+    width: 400px;
+    height: 80px;
     border: solid 1px #edb321;
     border-radius: 2px;
     background-color: #edb321;
-    font-size: 40px
+    font-size: 40px;
     color: #ffffff;
 }
 
 button:focus {
     outline: 0;
+}
+
+p {
+    font-size:40px;
 }
