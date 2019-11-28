@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://marinbonsai.org/wp/wp-content/uploads/blue-gradient-background.jpg");
+    background-color: white;
 }
 
 .no-display {
@@ -17,7 +17,7 @@ body {
     font-size: 70px;
     margin-top: 1em;
     margin-bottom: 1em;
-    color: white;
+    color: black;
 }
 
 .content {
