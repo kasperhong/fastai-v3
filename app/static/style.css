@@ -20,6 +20,10 @@ body {
     color: #262626;
 }
 
+.p{
+    font-size:60px;
+}
+
 .content {
     margin-top: 10em;
 }
