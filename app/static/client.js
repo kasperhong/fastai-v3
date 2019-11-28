@@ -1,19 +1,6 @@
-/* If you're feeling fancy you can add interactivity 
-    to your site with Javascript */
-
-// prints "hi" in the browser's dev tools console
-console.log("hi");
-
 var el = x => document.getElementById(x);
 
-function showPicker() {
-  el("file-input").click();
-}
-
 function analyze() {
-  var uploadFiles = el("file-input").files;
-  if (uploadFiles.length !== 1) alert("Please select a file to analyze!");
-
   el("analyze-button").innerHTML = "Analyzing...";
   var xhr = new XMLHttpRequest();
   var loc = window.location;
@@ -25,13 +12,19 @@ function analyze() {
   xhr.onload = function(e) {
     if (this.readyState === 4) {
       var response = JSON.parse(e.target.responseText);
-      el("result-label").innerHTML = `Result = ${response["result"]}`;
+      if (response["result"] == "1") {
+        el("result-label").innerHTML = `This text belongs to comp.graphics`;
+      } else if (response["result"] == "7") {
+        el("result-label").innerHTML = `This text belongs to rec.autos`;
+      } else {
+        el("result-label").innerHTML = `${response["result"]}`;
+      }
     }
     el("analyze-button").innerHTML = "Analyze";
   };
 
   var fileData = new FormData();
-  fileData.append("file", uploadFiles[0]);
+  fileData.append("input-text", el("input-text").value);
   xhr.send(fileData);
 }
 
