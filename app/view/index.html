@@ -1,41 +1,36 @@
-<html lang='en'>
-<head>
-  <meta charset='utf-8'>
-  <link rel='stylesheet' href='../static/style.css'>
-  <script src='../static/client.js'></script>
-</head>
-<body>
-<div>
-  <div class='center'>
-    <div class='title'>Classify Pokemon 🐹</div>
-    <p>
-     Use images of <strong>Bulbasaur</strong>, <strong>Sqiurtle</strong>, <strong>Charmander</strong>,<strong>Pikachu</strong>, or
-      all four!
-    </p>
-    <div class='content'>
-      <div class='no-display'>
-        <input id='file-input'
-               class='no-display'
-               type='file'
-               name='file'
-               accept='image/*'
-               onchange='showPicked(this)'>
-      </div>
-      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
-      <div class='upload-label'>
-        <label id='upload-label'>No file chosen</label>
-      </div>
-      <div>
-        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-      </div>
-      <div class='analyze'>
-        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
-      </div>
-      <div class='result-label'>
-        <label id='result-label'></label>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spam identifier</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <!-- import the webpage's javascript file -->
+    <script src="/static/client.js" defer></script>
+  </head>  
+  
+  <body>
+    <div>
+    <h1>Spam identifier</h1>
+    </div>
+    <div>
+      <h2>
+        Copy and paste your spam sms below
+      </h2>
+
+      <input type="text" onclick="showPicker()" size="35">	
+    
+      <div class="analyze">
+          <button id="analyze-button" class="analyze-button" type="button" onclick="analyze()">Analyze</button>
       </div>
     </div>
-  </div>
-</div>
-</body>
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
 </html>
