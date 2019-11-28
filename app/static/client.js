@@ -10,17 +10,17 @@ function analyze() {
     alert(xhr.responseText);
   };
   xhr.onload = function(e) {
-    if (this.readyState === 4) {
-      var response = JSON.parse(e.target.responseText);
-      if (response["result"] == "1") {
+    //if (this.readyState === 4) {
+    var response = JSON.parse(e.target.responseText);
+      /*if (response["result"] == "1") {
         el("result-label").innerHTML = `This text belongs to comp.graphics`;
       } else if (response["result"] == "7") {
         el("result-label").innerHTML = `This text belongs to rec.autos`;
-      } else {
-        el("result-label").innerHTML = `${response["result"]}`;
-      }
-    }
-    el("analyze-button").innerHTML = "Analyze";
+      } else {*/
+    el("result-label").innerHTML = `${response["result"]}`;
+      //}
+    //}
+    //el("analyze-button").innerHTML = "Analyze";
   };
 
   var fileData = new FormData();
