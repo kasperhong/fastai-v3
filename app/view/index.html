@@ -1,39 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Spam identifier</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="../static/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="../static/client.js"></script>
-  </head>  
-  
-  <body>
-    <div>
-    <h1>Spam identifier</h1>
-    </div>
-    <div>
-      <h2>
-        Copy and paste your spam sms below
-      </h2>
-
-      <input type="text" onclick="showPicker()" size="35">	
-    
-      <div class="analyze">
-          <button id="analyze-button" class="analyze-button" type="button" onclick="analyze()">Analyze</button>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <link rel='stylesheet' href='../static/style.css'>
+  <script src='../static/client.js'></script>
+</head>
+<body>
+<div>
+  <div class='center'>
+    <div class='title'>Spam Classifier</div>
+      <div>
+        Enter text: <input id='input-text' type="text" name="analyzetext" />
       </div>
-      
-      <div class="result-label">
-        <label id="result-label"></label>
+      <div class='analyze'>
+        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
+      </div>
+      <div class='result-label'>
+        <label id='result-label'></label>
       </div>
     </div>
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-  </body>
+  </div>
+</div>
+</body>
 </html>
