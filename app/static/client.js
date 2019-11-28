@@ -11,7 +11,7 @@ function analyze() {
   };
   xhr.onload = function(e) {
     if (this.readyState === 4) {
-    var response = JSON.parse(e.target.responseText);
+      var response = JSON.parse(e.target.responseText);
       if (response["result"] == "1") {
         el("result-label").innerHTML = `This text belongs to comp.graphics`;
       } else if (response["result"] == "7") {
