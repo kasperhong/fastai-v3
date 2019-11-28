@@ -9,7 +9,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse, JSONResponse
 from starlette.staticfiles import StaticFiles
 
-export_file_url = 'https://drive.google.com/uc?export=download&id=1P1_zp4NvvWvOT5XLmr7myOYunfGbT7kC'
+export_file_url = 'https://drive.google.com/uc?export=download&id=1lfUom31o6z1CkySubTYmA2Gu6XW1TiNc'
 export_file_name = 'export.pkl'
 
 classes = ['brain tumor', 'no brain tumor']
